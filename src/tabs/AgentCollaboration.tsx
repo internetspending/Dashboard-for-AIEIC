@@ -149,7 +149,7 @@ export default function AgentCollaboration() {
             <div className="agent-status-role">{agent.description}</div>
             <div className="agent-status-metrics">
               <div className="agent-metric">
-                <span className="agent-metric-value" style={{ color: agent.name === 'Integrity' && agent.primaryMetric.value > 0 ? 'var(--color-needs-help)' : 'inherit' }}>
+                <span className="agent-metric-value" style={{ color: agent.name === 'Integrity' && Number(agent.primaryMetric.value) > 0 ? 'var(--color-needs-help)' : 'inherit' }}>
                   {agent.primaryMetric.value}
                 </span>
                 <span className="agent-metric-label">{agent.primaryMetric.label}</span>
